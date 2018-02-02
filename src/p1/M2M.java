@@ -17,8 +17,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-
-
 public class M2M {
 
     public static void main(String... args) throws Exception {
@@ -28,9 +26,8 @@ public class M2M {
         String appName = mark.getAppName(outputFileName);
         DB db = DB.readDataBase("test/inria.families2.pl");
         Table family = db.getTableEH("family");
-        family.print(System.out);
-
         Table member = db.getTableEH("member");
+        
         DBSchema dbs = DBSchema.readSchema("test/families1.schema.pl");
         DB newfamilydb = new DB(appName, dbs);
         Table newfamily = newfamilydb.getTable("family");
@@ -47,8 +44,6 @@ public class M2M {
                 .add("fid", b -> getFid(b, family))
                 .add("isMale", b -> isMale(b, family));
         newmember.addTuples(member, memberColumnCorr);
-        // add sorting here
-        newfamilydb.print(System.out);
         newfamilydb.print(outputFileName);
     }
 
@@ -59,7 +54,6 @@ public class M2M {
         if (!t.isNull("sonOf")) {
             return t.get("sonOf");
         }
-
         for (Tuple familytuple : family.tuples()) {
             if (familytuple.get("fatherid").equals(t.get("mid"))) {
                 return familytuple.get("id");
