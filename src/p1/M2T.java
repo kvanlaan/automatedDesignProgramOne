@@ -30,6 +30,8 @@ public class M2T {
     }
     
     public static void main(String... args) throws Exception {
+        System.out.println("\n\nPart3 ...");
+        
         // Step 1: standard marquee processing
         Marquee1Argument mark = new Marquee1Argument(P1.class, ".families1.pl", args);
         String inputFileName = mark.getInputFileName();

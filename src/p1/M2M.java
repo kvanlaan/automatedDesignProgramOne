@@ -20,6 +20,7 @@ import java.util.stream.Stream;
 public class M2M {
 
     public static void main(String... args) throws Exception {
+        System.out.println("\n\nPart2 ...");
         Marquee2Arguments mark = new Marquee2Arguments(P1.class, ".families2.pl", ".families1.pl", args);
         String inputFileName = mark.getInputFileName();
         String outputFileName = mark.getOutputFileName();
