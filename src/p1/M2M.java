@@ -44,6 +44,7 @@ public class M2M {
                 .add("fid", b -> getFid(b, family))
                 .add("isMale", b -> isMale(b, family));
         newmember.addTuples(member, memberColumnCorr);
+        newfamilydb.print(System.out);
         newfamilydb.print(outputFileName);
     }
 
