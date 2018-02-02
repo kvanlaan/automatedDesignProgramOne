@@ -13,8 +13,6 @@ public class ConformFamilies2 {
         DB db = DB.readDataBase(inputFileName);
         Table family = db.getTableEH("family");
         Table member = db.getTableEH("member");
-//        family.print(System.out);
-//        member.print(System.out);
 
         ErrorReport er = new ErrorReport();
 

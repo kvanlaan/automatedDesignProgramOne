@@ -9,7 +9,7 @@ public class P1 {
             System.out.println(e.getMessage());
         }
         
-//        M2M.main("inria.families2.pl");                        //<-- program #3
-        M2T.main("test/inria.families1.pl");                        //<-- program #4 (called again)
+        M2M.main("inria.families2.pl");                        //<-- program #3
+        M2T.main("inria.families1.pl");                        //<-- program #4 (called again)
     }
 }

@@ -33,7 +33,7 @@ public class M2T {
         // Step 1: standard marquee processing
         Marquee1Argument mark = new Marquee1Argument(P1.class, ".families1.pl", args);
         String inputFileName = mark.getInputFileName();
-        String outputSchema = "D:\\UTAustin\\Term4_2018Spring\\CS392F(51775)\\Programmings\\1\\P1\\test\\print.schema.pl";
+        String outputSchema = "test/print.schema.pl";
         
         // Step 2: read the families database and their tables
         DB in = DB.readDataBase(inputFileName);
