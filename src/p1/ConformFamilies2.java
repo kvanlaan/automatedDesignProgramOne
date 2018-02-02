@@ -10,9 +10,10 @@ public class ConformFamilies2 {
         String inputFileName = mark.getInputFileName();
         String AppName = mark.getAppName(inputFileName);
         System.out.format("Conforming file %s:\n\n", inputFileName);
-
+        
         // Step 2: open database to be validated + get needed tables
         DB db = DB.readDataBase(inputFileName);
+        db.print(System.out);
         Table family = db.getTableEH("family");
         Table member = db.getTableEH("member");
 
